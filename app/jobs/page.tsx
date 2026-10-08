@@ -1,0 +1,6 @@
+import Link from 'next/link'
+import { ArrowLeft, BriefcaseBusiness } from 'lucide-react'
+import { jobs } from '@/lib/jobs'
+import { JobsBrowser } from '@/components/jobs-ui'
+export default function JobsPage(){ return <main className="platform-page"><header className="platform-nav"><Link href="/" className="brand"><img src="/endure-jobs-logo.png" alt="Endure Jobs" className="h-7 w-7 object-contain" />ENDURE <b>JOBS</b></Link><nav><Link href="/">Home</Link><Link href="/dashboard">Dashboard</Link><Link href="/dashboard/applications">Applications</Link></nav><Link href="/" className="button-small">Back home</Link></header><div className="mx-auto max-w-7xl px-6 pb-24 pt-36 lg:px-10"><Link href="/" className="back-link"><ArrowLeft className="h-4 w-4"/> Endure Jobs</Link><div className="mt-8 max-w-3xl"><p className="eyebrow">DEMO JOB DISCOVERY</p><h1 className="display-heading">Find your next opportunity.</h1><p className="mt-6 max-w-2xl text-lg leading-8 text-slate-400">Search opportunities matched to your skills, experience and career goals.</p></div><div className="mt-12"><JobsBrowser initialJobs={jobs}/></div></div></main> }
+export const metadata={title:'Find Jobs | Endure Jobs',description:'Discover your next opportunity with Endure Jobs.'}
