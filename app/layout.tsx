@@ -52,6 +52,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
+        <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: "Endure Jobs",
+      url: "https://endurejobs.com/",
+      logo: "https://endurejobs.com/endure-jobs-logo.png",
+      sameAs: [
+        "https://www.linkedin.com/company/endure-jobs/"
+      ]
+    })
+  }}
+/>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
